@@ -26,8 +26,6 @@ public:
 
 	//constructors organized from deafult to parameterized constructor
 	Seven_Books();
-	Seven_Books(string,int,bool,char);
-	
-
+	Seven_Books(string,int,bool,char);	
 };
 

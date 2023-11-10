@@ -2,8 +2,9 @@
 #include <string>
 using namespace std;
 #include "Seven_Books.h"
-
+enum ReturnType{LESS, EQUAL, GREATER};
 void print(Seven_Books);
+void Compare(Seven_Books, Seven_Books);
 int main(void)
 {
 	cout << "Key of symobls: \n";
@@ -18,12 +19,23 @@ int main(void)
 	print(bestSelling);
 	print(leastPopular);
 	print(mostPopular);
+	Compare(mostPopular, leastPopular);
 	
 	return 0;
 };
 
 void print(Seven_Books books)
 {
-	cout << "| " << books.get_title() << "| This is Book #" << books.get_booknum() << "| " << books.get_isPopular() << "|" << books.get_symbol() << "| \n";
+	cout << "| " << books.get_title() << "| This is Book #" << books.get_booknum() << "| " << books.get_isPopular() << "|" << books.get_symbol() << "| \n\n";
+
+}
+
+void Compare(Seven_Books book1, Seven_Books book2)
+{
+	
+	if (book1.get_isPopular() > book2.get_isPopular())
+	{
+		cout << book1.get_title() << " is greater in popularity than " << book2.get_title() << "\n\n";
+	}
 	
 }
