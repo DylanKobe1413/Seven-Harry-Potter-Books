@@ -19,8 +19,9 @@ int main(void)
 	print(bestSelling);
 	print(leastPopular);
 	print(mostPopular);
+	Compare(mostPopular, bestSelling);
+	Compare(leastPopular, bestSelling);
 	Compare(mostPopular, leastPopular);
-	
 	return 0;
 };
 
@@ -34,8 +35,13 @@ void Compare(Seven_Books book1, Seven_Books book2)
 {
 	
 	if (book1.get_isPopular() > book2.get_isPopular())
-	{
+	
 		cout << book1.get_title() << " is greater in popularity than " << book2.get_title() << "\n\n";
-	}
+	
+	else if (book1.get_isPopular() < book2.get_isPopular())
+		cout << book1.get_title() << " has less popularity than " << book2.get_title() << "\n\n";
+	
+	else if (book1.get_isPopular() == book2.get_isPopular())
+		cout << book1.get_title() << " Both books are equal in popularity " << book2.get_title() << "\n\n";
 	
 }
