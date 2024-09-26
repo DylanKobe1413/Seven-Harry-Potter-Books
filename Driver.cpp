@@ -1,3 +1,7 @@
+// This program has seven of the most popular Harry Potter books according to https://vanderbilthustler.com/2022/01/12/from-worst-to-best-the-harry-potter-books-ranked/ (and my personal bias!).
+// It will print out the best-selling, least-popular, and most-popular of the books.
+// It will also compare which of the two books chosen is more popular, least popular, and better selling.
+
 #include <iostream>
 #include <string>
 using namespace std;
